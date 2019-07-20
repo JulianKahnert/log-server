@@ -11,6 +11,8 @@ import Vapor
 /// Register your application's routes here.
 public func routes(_ router: Router) throws {
 
+    let endpoint = "https://log-poc-dev.vapor.cloud"
+
     router.get { req in
 
 
@@ -29,7 +31,7 @@ public func routes(_ router: Router) throws {
     * POST /event
 
     Examples:
-    curl -d '{"type":"info", "message":"this is a test"}' -H "Content-Type: application/json" -X POST http://localhost:8080/event
+    curl -d '{"type":"info", "message":"this is a test"}' -H "Content-Type: application/json" -X POST \(endpoint)/event
 
     """
     }
